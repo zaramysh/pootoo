@@ -1,0 +1,635 @@
+<!doctype html>
+<!--ZARA HAPIZ WEBSITE, COPYRIGHT ZARA HAPIZ 2024-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>ART GALLERY - Zara Hapiz</title>
+<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO SMALL.png">
+<link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<!--CSS CODES-->
+<style>
+	:root {
+  		--black: #0C0A13;
+  		--white: #F0F5E4;
+		--pink: #F17F96;
+		--blue: #3D84E1;
+		--orange: #E65E15;
+	}
+	body {
+  		font-family: "Space Grotesk", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.1em;
+		color: #0C0A13;
+		margin: 35px;
+		background-color: #F0F5E4;
+		background-image: linear-gradient(var(--white), var(--pink) 40%);
+		background-repeat: repeat-y;
+		background-position: left top;
+  		background-attachment: scroll;
+		background-size: cover;
+		cursor: default;
+		overflow-x: hidden;
+	}
+	h1 {
+		
+		font-weight: 900;
+		font-style: normal;
+		font-size: 7em;
+		margin: 10px;
+		line-height: 0.8em;
+	}
+	h2 {
+		margin: 0;
+		margin-top: 20px;
+		font-weight: 600;
+	}
+	h3 {
+		margin: 10px 0 10px 0;
+		font-weight: 400;
+	}
+	h4 {
+		margin: 10px 0 10px 0;
+		font-weight: 500;
+		font-size: 1em;
+	}
+	h5 {
+		font-weight: 500;
+		font-size: 0.5em;
+		opacity: 0.7;
+	}
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: #F0F5E4;
+		border-left: 1px solid #0C0A13;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #0C0A13;
+		border: 1px solid #0C0A13;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #E65E15;
+	}
+	ul {
+		height: 0px;
+		list-style-type: none;
+		margin: 0;
+  		padding: 0;
+		float: right;
+		font-size: 0.9em;
+	}
+	ul a {
+		display: block;
+		margin: 30px 15px 15px 30px;
+		text-decoration: none;
+		color: #0C0A13;
+		float: left;
+		transition: color 0.3s, transform 0.3s;
+	}
+	ul a:hover {
+		color: #E65E15;
+		transform: rotate(10deg);
+	}
+	.active {
+		color: #F17F96;
+	}
+	.ribbon {
+		margin: -35px;
+		font-size: 1em;
+		font-weight: 400;
+		text-align: center;
+		background-color: #0C0A13;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		height: 33px;
+		font-style: italic;	
+		white-space: nowrap;
+	}
+	.ribbon-text {
+		color: #F0F5E4;
+		font-size: 1.4em;
+  		animation: bannermove 10s linear infinite;
+ 		animation-play-state: running;
+ 		-webkit-animation-play-state: running;
+ 		animation-direction: alternate-reverse;
+	}
+	@keyframes bannermove {
+  		0% 
+	{
+    transform: translate(0, 0);
+  	}
+  	100% {
+    transform: translate(-10%, 0);
+  }
+}
+	.ribbon-text:hover {
+		-webkit-animation-play-state:paused;
+		-moz-animation-play-state:paused;
+		-o-animation-play-state:paused;
+		animation-play-state:paused;
+	}
+	footer {
+		color: var(--white);
+		text-align: center;
+		font-size: 0.9em;
+		background-color: var(--black);
+		margin: -35px;
+		padding: 20px;
+	}
+	.topnav .icon {
+  		display: none;
+		color: #F0F5E4;
+	}
+	.column {
+		flex: 50%;
+		padding: 0 5px;
+	}
+	.row {
+		display: flex;
+	}
+	.spin {
+		animation: spin 1s linear infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
+	}
+	@keyframes spin 
+	{
+		to { 
+			transform: rotate(360deg);
+		}
+	}	
+		/* RESPONSIVE*/
+	@media screen and (max-width: 830px) {
+		html {
+		}
+		body {
+			font-size: 2.5vw;
+			margin: 35px 10px;
+			overflow-x: hidden;
+			background-position: top center;
+		}
+		h1 {
+			font-size: 15vw;
+		}
+		h4, h5 {
+			font-size: 3vw;
+		}
+		ul {
+			width: 40%;
+			text-align: right;
+		}
+		ul a {
+			margin-top: 3.5vw;
+			font-size: 5vw;
+			line-height: 3vw;
+			overflow: visible;
+			color: var(--black);
+		}
+		ul a:hover {
+			transform: rotate(5deg);
+		}
+		
+		.row {
+			display: block;
+		}
+		.column {
+			margin-bottom: 10vw;
+			width: 100%;
+		}
+		::-webkit-scrollbar {
+		width: 0px;
+		}
+		.topnav { 
+			background-color: var(--pink);
+			border-radius: 20px;
+		}
+		.topnav a {display: none;}
+  		.topnav a.icon {
+			float: right;
+			display: block;
+			color: var(--black);
+ 		}
+		.topnav.responsive {position: relative;}
+		.topnav.responsive a.icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.topnav.responsive a {
+			float: none;
+			display: block;
+			text-align: left;
+		}
+		i {
+			width: "40vw";
+		}
+		.ribbon {
+			height: 5vw;
+		}
+		.gallery {
+			margin-left: 5vw;
+		}
+	}
+	/*ART GALLERY STYLES*/
+	img {
+		max-height: 450px;
+		margin: auto;
+  		display: block;
+		cursor: pointer;
+	}
+	.gallery {
+		position: relative;
+		display: inline-block;
+		margin-right: 15px;
+  		width: 300px;
+  		background-color: #F3F3F3;
+  		height: 300px;
+		/*border-left: 5px solid #F0B719;*/
+		color: #0A0A0A;
+		overflow: visible;
+		margin-bottom: 20px;
+		text-align: left;
+		vertical-align: top;
+	}
+	.title {
+		display: none;
+		background-color: #2346F3;
+		color: #F3F3F3;
+		padding: 5px 7px;
+		font-size: 0.8em;
+	}
+	.container {
+		display: none;
+		padding: 10px 15px 0px 15px;
+		overflow: visible;
+		line-height: 25px;
+		font-size: 0.7em;
+	}
+	/* The Modal (background) */
+	.modal {
+        display: none; /* hidden by default */
+        position: fixed; 
+        z-index: 1; /* sit on top */
+        padding-top: 100px; /* location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); /* fallback colour */
+        background-color: rgba(0,0,0,0.9); 
+        cursor: default;
+	}
+	/* modal caption */
+	#caption {
+	  	margin: auto;
+	  	display: block;
+	  	width: 80%;
+	  	max-width: 700px;
+	  	text-align: center;
+	  	color: var(--white);
+	  	padding: 10px 0;
+	  	height: 150px;
+	  	font-size: 1em;
+	  	overflow: auto;
+	}
+	/* close button (x) */
+	.close {
+	  	position: absolute;
+	  	top: 15px;
+	  	right: 35px;
+	  	color: var(--blue);
+	  	font-size: 40px;
+	  	font-weight: bold;
+	  	transition: 0.3s;
+	}
+
+	.close:hover, .close:focus {
+	  	color: #F26697;
+	  	text-decoration: none;
+	  	cursor: pointer;
+	}
+</style>
+<!--END OF CSS CODES-->
+
+	
+	
+</head>
+<body>
+	<!--HEADER STUFF-->
+	<div class="ribbon"><div class="ribbon-text">
+	WELCOME TO MY (NEW &amp; IMPROVED) WEBSITE. &#10240; ENJOY YOUR TIME HERE! &#10240; THANKS FOR THE SUPPORT &lt;3
+	</div></div>
+	<br>
+	<ul style="float:left;">
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO.png" alt="ZH" style="width:150px;"></a></li>
+	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
+		<a href="index.html">home</a>
+  		<a class="active" href="gallery.html">gallery</a>
+		<a href="store.html">store</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    	<i class="fa fa-bars" style="font-size:7.5vw;"></i>
+  	</a></div>
+	</ul>
+	<!--END OF HEADER STUFF-->
+	
+	
+<!--MAIN!!!!-->	
+	<br><br><br><br><br><h1>zara's artwork</h1>
+	<h3>Click each image for more information.</h3><br>
+	<img class="spin" style="position:absolute;left:1200px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO PINK ICON.png" alt="">
+	<img class="spin" style="position:absolute;top:900px;left:-50px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO WHITE ICON.png" alt="">
+	
+	
+	<div class="gallery">
+		<div class="title">Jack Harlow</div>
+	<img id="img2023-10" src="artwork/jack harlow.png" width="300px" height="300px" alt="Jack Harlow">
+	<div class="container">8/8/23<i><br>Graphite</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Earth-42's Prowler</div>
+	<img id="img2023-9" src="artwork/prowler-42-1.png" width="300px" height="300px" alt="Miles Morales, the Prowler of Earth-42.">
+	<div class="container">6/6/23<br><i>Graphite</i></div></div>	
+	
+	<div class="gallery">
+		<div class="title">beabadoobee</div>
+	<img id="img2023-8" src="artwork/beabadoobee-1.png" width="300px" height="300px" alt="beabadoobee">
+	<div class="container">12/4/23<br><i>Graphite</i></div></div>	
+	
+	<div class="gallery">
+		<div class="title">SZA</div>
+	<img id="img2023-7" src="artwork/sza-1.png" width="300px" height="300px" alt="SZA">
+	<div class="container">16/2/23<br><i>Graphite</i></div></div>	
+	
+	<div class="gallery">
+		<div class="title">Xavier Thorpe</div>
+	<img id="img2023-6" src="artwork/xavier-1.png" width="300px" height="300px" alt="Xavier Thorpe from <i>Wednesday</i> during the Poe Cup">
+	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Wednesday Addams</div>
+	<img id="img2023-5" src="artwork/wednesday-1.png" width="300px" height="300px" alt="Wednesday Addams from <i>Wednesday</i> during the Poe Cup">
+	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Enid Sinclair</div>
+	<img id="img2023-4" src="artwork/enid-1.png" width="300px" height="300px" alt="Enid Sinclair from <i>Wednesday</i> during the Poe Cup">
+	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Madeline Argy</div>
+	<img id="img2023-3" src="artwork/madeline-1.png" width="300px" height="300px" alt="Madeline Argy">
+	<div class="container">6/2/23<br><i>Graphite</i></div></div>
+	
+	<h1><center>having fun there?</center></h1><br>
+	<div class="gallery">
+		<div class="title">Central Cee</div>
+	<img id="img2023-2" src="artwork/central cee-1.png" width="300px" height="300px" alt="Central Cee">
+	<div class="container">5/2/23<br><i>Graphite</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Clairo</div>
+	<img id="img2023-1" src="artwork/clairo-1.png" width="300px" height="300px" alt="Clairo">
+	<div class="container">3/2/23<br><i>Graphite</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Pear</div>
+	<img id="img2022-3" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
+	<div class="container">27/6/22<br><i>Acrylic</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Save the Animals<i>!</i></div>
+	<img id="img2022-2" src="artwork/save the animals.png" width="300px" height="300px" alt="Save The Animals">
+	<div class="container">9/5/22<br><i>Graphite</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Waktu Senja</div>
+	<img id="img2022-1" src="artwork/waktu senja-1.png" width="300px" height="300px" alt="Waktu Senja; acrylic on paper">
+	<div class="container">31/3/22<br><i>Acrylic</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Fried Egg</div>
+	<img id="img2021-4" src="artwork/egg-1.png" width="300px" height="300px" alt="Fried Egg">
+	<div class="container">30/11/21<br><i>Digital</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Promises</div>
+	<img id="img2021-3" src="artwork/promises-1.png" width="300px" height="300px" alt="Promises">
+	<div class="container">7/10/21<br><i>Digital</i></div></div>
+	
+	<div class="gallery">
+		<div class="title">Willow</div>
+	<img id="img2021-2" src="artwork/willow-1.png" width="300px" height="300px" alt="WILLOW">
+	<div class="container">11/6/21<br><i>Acrylic</i></div></div>
+	
+	<img class="spin" style="position:absolute;left:1200px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO ICON.png" alt="">
+	
+	<div class="gallery">
+		<div class="title">Manta Ray</div>
+	<img id="img2021-1" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (for Suraya)">
+	<div class="container">22/5/21<br><i>Digital</i></div></div><br>
+	
+	<h1><center>the end!</center></h1><br><br><br>
+	
+<!--END OF MAIN-->	
+	<!-- MODAL -->
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="img01" alt="Sorry, image failed to load!">
+	<div id="caption"></div>
+</div>
+	
+	
+	
+	<!--FOOTER STUFF-->
+	<footer><br><br>
+		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@flow7rboy" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
+		<p>© Zara Hapiz 2024</p>
+		<p><img src="ZARA HAPIZ LOGO WHITE ICON.png" alt="" style="width:50px;"></p>
+		
+	</footer>
+	<!--END OF FOOTER STUFF-->
+	<!--JAVASCRIPT SCRIPTS-->
+	<script>
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+	    if (x.className === "topnav") {
+			x.className += " responsive";
+	  	} else {
+			x.className = "topnav";
+	  	}
+	}
+	window.addEventListener('scroll', () => {
+  	document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+	}, false);
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// IMAGE MODAL
+var img = document.getElementById('img2023-10');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-9');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}// IMAGE MODAL
+var img = document.getElementById('img2023-6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2022-2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2022-1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+ 	modal.style.display = "block";
+  	modalImg.src = this.src;
+  	captionText.innerHTML = this.alt;
+}
+
+
+// get the x
+var span = document.getElementsByClassName("close")[0];
+
+// close the model when clicking x
+span.onclick = function() { 
+	modal.style.display = "none";
+}
+img01.onclick = function() {
+	modal.style.display = "none";
+}
+</script>
+</body>
+</html>
